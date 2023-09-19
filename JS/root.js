@@ -35,7 +35,7 @@ function generateEntry(entry_type,entry_content,entry_format = "p") {
     return true;
 }
 // Input type change
-const input_types = ["text", "date", "color", "tel", "email", "url", "time", "month", "week", "file"];
+const input_types = ["text", "date", "color", "tel", "email", "url", "time", "month", "week"]; // Disabled "file"
 input_type = "text";
 function changeInputType(new_input_type) {
     console.log("Changing input type to "+new_input_type);

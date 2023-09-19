@@ -27,12 +27,12 @@
             <div id="anchor"></div>
         </div>
         <form id="input_box" onsubmit="main_input_click(); return false;">
-            <input type="text"  name="main_input" id="main_input_text"  placeholder="Command" autofocus>
+            <input type="text"  name="main_input" id="main_input_text"  placeholder="Command"             autofocus                                                   autocomplete="off">
             <input type="date"  name="main_input" id="main_input_date"  placeholder="YYYY-MM-DD"          pattern="^\d{4}-\d{2}-\d{2}$">
             <input type="color" name="main_input" id="main_input_color" placeholder="#FFFFFF"             pattern="^#?([a-fA-F0-9]{8}|[a-fA-F0-9]{6}|[a-fA-F0-9]{3})">
-            <input type="tel"   name="main_input" id="main_input_tel"   placeholder="123-456-7890"        pattern="^[0-9\s\-\+]{3,15}$">
-            <input type="email" name="main_input" id="main_input_email" placeholder="example@example.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
-            <input type="url"   name="main_input" id="main_input_url"   placeholder="https://example.com">
+            <input type="tel"   name="main_input" id="main_input_tel"   placeholder="123-456-7890"        pattern="^[0-9\s\-\+]{3,15}$"                               autocomplete="tel">
+            <input type="email" name="main_input" id="main_input_email" placeholder="example@example.com" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"          autocomplete="email">
+            <input type="url"   name="main_input" id="main_input_url"   placeholder="https://example.com"                                                             autocomplete="url">
             <input type="time"  name="main_input" id="main_input_time"  placeholder="HH:MM">
             <input type="month" name="main_input" id="main_input_month" placeholder="MM">
             <input type="week"  name="main_input" id="main_input_week"  placeholder="WW">
