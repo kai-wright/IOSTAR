@@ -1,0 +1,134 @@
+// Reset to a basic standard
+@import '__reset.scss';
+// Import variables
+// @import '__variables.scss';
+// Import font
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+// Import loader
+@import '__loader.scss';
+
+* {
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    // border: 1px solid red;
+}
+@mixin unitbox {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 1em !important;
+    padding: 2em !important;
+}
+@mixin itembox {
+    border-radius: 5px;
+    max-width: 80%;
+    margin-bottom: 0.2em;
+    padding: 0.5em;
+    overflow-anchor: none;
+}
+
+body {
+    display : flex;
+    padding: 1em;
+    flex-direction: row-reverse;
+}
+
+main {
+    @include unitbox();
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    #input_box {
+        align-self: flex-end;
+        width: 100%;
+        margin-bottom: 0;
+        button {
+            margin-bottom: 0;
+        }
+        #main_input_date {
+            display: none;
+        }
+        #main_input_color {
+            display: none;
+        }
+        #main_input_tel {
+            display: none;
+        }
+        #main_input_email {
+            display: none;
+        }
+        #main_input_url {
+            display: none;
+        }
+        #main_input_time {
+            display: none;
+        }
+        #main_input_month {
+            display: none;
+        }
+        #main_input_week {
+            display: none;
+        }
+        #main_input_file {
+            display: none;
+        }
+    }
+    #output_box {
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        height: 100%;
+        .item_input {
+            @include itembox();
+            margin-left: auto;
+            margin-right: 0;
+            text-align: right;
+        }
+        .item_output {
+            @include itembox();
+            margin-left: 0;
+            margin-right: auto;
+            text-align: left;
+        }
+        .item_input + .item_output {
+            margin-top: 0.1em;
+        }
+        .item_output + .item_input {
+            margin-top: 0.8em;
+        }
+        #anchor {
+            overflow-anchor: auto;
+            height: 1px;
+        }
+    }
+}
+
+aside {
+    @include unitbox();
+    display: flex;
+    flex-direction: column;
+    min-width: 25vw;
+    h1 {text-align: center;}
+    #status_box {
+        margin-top: auto;
+        margin-bottom: auto;
+        align-self: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 0;
+    }
+    main {
+        width: 80vw;
+        border: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    aside {
+        width: 80vw;
+        border: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
